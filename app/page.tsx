@@ -56,47 +56,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-container home-discovery">
+      <section className="section-container">
         <ScrollReveal>
           <Panel glow>
-            <PanelHeader title="Library at a glance" description="A compact map of the catalog" />
-
-            <div className="home-stats">
-              <div className="library-stat">
-                <div className="library-stat-value">{allItems.length}</div>
-                <div className="library-stat-label">Readings</div>
-              </div>
-              <div className="library-stat">
-                <div className="library-stat-value">{levels.length}</div>
-                <div className="library-stat-label">Levels</div>
-              </div>
-              <div className="library-stat">
-                <div className="library-stat-value">4</div>
-                <div className="library-stat-label">Paths</div>
-              </div>
-              <div className="library-stat">
-                <div className="library-stat-value">5</div>
-                <div className="library-stat-label">Topics</div>
-              </div>
-            </div>
+            <PanelHeader title="Choose Your Path" description="Four ways through the library" />
+            <PathPicker />
           </Panel>
         </ScrollReveal>
+      </section>
 
-        <div className="home-discovery-grid">
-          <ScrollReveal>
-            <Panel glow>
-              <PanelHeader title="Choose Your Path" description="Four ways through the library" />
-              <PathPicker />
-            </Panel>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.1}>
-            <Panel>
-              <PanelHeader title="Browse by Topic" description="Quick previews of each theme" />
-              <TopicBrowser />
-            </Panel>
-          </ScrollReveal>
-        </div>
+      <section className="section-container">
+        <ScrollReveal delay={0.1}>
+          <Panel>
+            <PanelHeader title="Browse by Topic" description="Explore by subject area" />
+            <TopicBrowser />
+          </Panel>
+        </ScrollReveal>
       </section>
     </>
   );

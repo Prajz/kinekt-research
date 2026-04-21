@@ -6,7 +6,7 @@ export function TopicBrowser() {
     <div className="topic-browser">
       {topics.map((topic) => {
         const items = getItemsByTopic(topic.slug);
-        const previewItems = items.slice(0, 2);
+        const previewItems = items.slice(0, 10);
         const remainingCount = items.length - previewItems.length;
         return (
           <div key={topic.slug} className="topic-card">
